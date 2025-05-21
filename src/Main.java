@@ -23,7 +23,7 @@ public class Main {
         }
         System.out.println("Задача 3");
         int year = 2015;
-        if ((year % 4 == 0 && year >= 1584) || (year % 100 != 0 && year % 400 == 0)) {
+        if ((year >= 1584 && year % 4 == 0) || (year % 100 != 0 && year % 400 == 0)) {
             System.out.println(+year + " год является високосным");
         } else {
             System.out.println(+year + " год не является високосным");
@@ -31,9 +31,9 @@ public class Main {
 
         System.out.println("Задача 4");
         int deliveryDistance = 95;
-        if (deliveryDistance < 20) {
+        if (deliveryDistance <= 20) {
             System.out.println("Потребуется: 1 день");
-        } else if (deliveryDistance >= 20 && deliveryDistance == 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             System.out.println("Потребуется: 2 дня");
         } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
             System.out.println("Потребуется: 3 дня");
